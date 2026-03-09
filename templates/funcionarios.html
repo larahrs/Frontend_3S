@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h1>funcionarios</h1>
+
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="flash-error px-3">
+    <!-- passo 4: percorrer a lista de mensagens -->
+    {% for category, message in messages %}
+    <!-- passo 5: criar um card filho -->
+    <div class="alert {{ category }} alert-dismissible fade show px-5" role="alert">
+        <strong>{{ message }}</strong>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    novo funcionario
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form-hexagono" action="{{ url_for('cadastro_funcionario') }}" method="post">
+                    <label>
+                        nome:
+                        <input placeholder="digite o nome" name="form-nome" class="form-control">
+                    </label>
+                    <label>
+                        data nascimento:
+                        <input placeholder="digite a data de nascimento" name="form_data_nascimento"
+                               class="form-control" type="date">
+                    </label>
+                    <label>
+                        cpf:
+                        <input placeholder="digite o cpf" name="form-cpf" class="form-control">
+                    </label>
+                    <label>
+                        email:
+                        <input placeholder="digite o email" name="form-email" class="form-control">
+                    </label>
+                    <label>
+                        senha:
+                        <input placeholder="digite a senha" name="form-senha" class="form-control">
+                    </label>
+                    <label>
+                        cargo:
+                        <input placeholder="digite o cargo" name="form-cargo" class="form-control">
+                    </label>
+                    <label>
+                        salario:
+                        <input placeholder="digite o salario" name="form-salario" class="form-control">
+                    </label>
+                    <button type="submit" class="btn btn-info">cadastrar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">nome</th>
+        <th scope="col">data nascimento</th>
+        <th scope="col">cpf</th>
+        <th scope="col">email</th>
+        <th scope="col">cargo</th>
+        <th scope="col">salario</th>
+        <th scope="col">acoes</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for funcionario in lista_funcionarios %}
+
+    <tr>
+        <td>{{ funcionario.id }}</td>
+        <td>{{ funcionario.nome }}</td>
+        <td>{{ funcionario.data_nascimento }}</td>
+        <td>{{ funcionario.cpf }}</td>
+        <td>{{ funcionario.email }}</td>
+        <td>{{ funcionario.cargo }}</td>
+        <td>{{ funcionario.salario }}</td>
+        <td><a href=""><i class="bi bi-pencil"></i></a> <a href=""><i class=" bi bi-trash text-danger"></i></a></td>
+    </tr>
+
+    {% endfor %}
+    <tr>
+        <td>larah</td>
+        <td>27/01/2009</td>
+        <td>414.764.538-02</td>
+        <td>larah.rafaela@gmail.com</td>
+        <td>larinha2009</td>
+        <td>estudante</td>
+        <td>R$40,000</td>
+        <td><a href=""><i class="bi bi-pencil"></i></a> <a href=""><i class=" bi bi-trash text-danger"></i></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+{% endblock conteudo %}
