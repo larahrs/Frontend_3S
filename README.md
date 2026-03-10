@@ -21,3 +21,6 @@
 
 ## site para funcionários 
 <img width="1905" height="910" alt="image" src="https://github.com/user-attachments/assets/56aa2ee7-8d4c-42fa-93dd-4c51703652cc" />
+
+## animais
+<img width="1902" height="912" alt="image" src="https://github.com/user-attachments/assets/e23eeec3-5d36-4f31-bf52-c10f494a57a9" />
