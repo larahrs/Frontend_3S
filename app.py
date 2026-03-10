@@ -303,6 +303,11 @@ def funcionarios():
     result_email = db_session.execute(ver_email).scalars().all()
     return render_template('funcionarios.html', lista_funcionarios=result_email)
 
+@app.route('/animais')
+def animais():
+    return render_template('animais.html')
+
+
 # TODO Final do código
 
 if __name__ == '__main__':

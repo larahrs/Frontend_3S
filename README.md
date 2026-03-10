@@ -10,7 +10,7 @@
 ## cursos 2
 <img width="1884" height="820" alt="image" src="https://github.com/user-attachments/assets/8401c170-ee23-457b-b6d9-53a305431c93" />
 
-## site para cálculos
+## cálculos
 <img width="1906" height="911" alt="image" src="https://github.com/user-attachments/assets/4b8f135a-672a-4e88-9af4-cee7f059c099" />
 
 ## cálculos para operações aritméticas
@@ -19,5 +19,5 @@
 ## cálculos para geomteria
 <img width="1906" height="905" alt="image" src="https://github.com/user-attachments/assets/02a6fca5-5b78-46b4-879f-0676bf0cfcdd" />
 
-## site para funcionários 
+## funcionários 
 <img width="1905" height="910" alt="image" src="https://github.com/user-attachments/assets/56aa2ee7-8d4c-42fa-93dd-4c51703652cc" />

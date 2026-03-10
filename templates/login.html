@@ -19,21 +19,22 @@
 
 <div class="login d-flex justify-content-center align-items-center">
     <div class="card_login card">
-        <form class="form d-flex flex-column justify-content-center align-items-center" action="{{ url_for('login') }}"
+        <form id="form-login" class="form d-flex flex-column justify-content-center align-items-center" action="{{ url_for('login') }}"
               method="post">
             <label class="my-2">
                 email:
-                <input placeholder="Digite o email" name="form-email" class="form-control">
+                <input id="input-email" placeholder="Digite o email" name="form-email" class="form-control">
             </label>
             <label class="my-2">
                 senha:
-                <input placeholder="Digite a senha" type="password" name="form-senha" class="form-control">
+                <input id="input-senha" placeholder="Digite a senha" type="password" name="form-senha" class="form-control">
             </label>
             <button type="submit" class="btn btn-success">entrar</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastro">
-                cadastrar funcionário
-            </button>
+            <a class="btn btn-danger my-2" onclick="limpaInputsLogin()">cancelar</a>
         </form>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastro">
+            cadastrar
+        </button>
     </div>
 </div>
 
