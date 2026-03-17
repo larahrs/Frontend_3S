@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from sqlalchemy.exc import SQLAlchemyError
+
+from api_routes import routes
 from database import db_session, Funcionario
 from sqlalchemy import select, and_, func
 from flask_login import LoginManager, login_required, login_user, logout_user
@@ -307,6 +309,11 @@ def funcionarios():
 def animais():
     return render_template('animais.html')
 
+
+@app.route('/gatos')
+def listar_gatos():
+    gatos = routes.get_gatos()
+    return render_template('gatos.html', gatos=gatos)
 
 # TODO Final do código
 
