@@ -313,7 +313,15 @@ def animais():
 @app.route('/gatos')
 def listar_gatos():
     gatos = routes.get_gatos()
+
+    print(gatos)
+    for gato in gatos:
+        gato["temperament"] = gato["temperament"].split(',')
+        gato["image"] = routes.get_image()["url"]
+
     return render_template('gatos.html', gatos=gatos)
+
+
 
 # TODO Final do código
 
