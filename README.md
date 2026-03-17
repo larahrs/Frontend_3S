@@ -27,3 +27,5 @@
 
 ## gatos
 <img width="1885" height="909" alt="image" src="https://github.com/user-attachments/assets/8adb6363-d2f0-40b7-8efe-0cb38f81662a" />
+<img width="1881" height="835" alt="image" src="https://github.com/user-attachments/assets/ed5ada1a-6af7-4fe4-9224-9f19ba49d3f9" />
+
